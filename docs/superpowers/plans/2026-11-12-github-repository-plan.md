@@ -30,16 +30,16 @@
 - Create: `.gitignore`
 - Create: `docs/superpowers/plans/2026-11-12-github-repository-plan.md`
 
-- [ ] Add standard Next.js/Node ignores, local env ignores, and OS/editor temporary files.
-- [ ] Run `npm run typecheck`, `npm run lint`, `npm test`, and `npm run build`.
-- [ ] Review `git status --short` and ensure no secret-looking files are staged.
+- [x] Add standard Next.js/Node ignores, local env ignores, and OS/editor temporary files.
+- [x] Run `npm run typecheck`, `npm run lint`, `npm test`, and `npm run build`.
+- [x] Review `git status --short` and ensure no secret-looking files are staged.
 
 ### Task 2: Initialize local Git and publish to GitHub
 
 **Files:**
 - Modify: Git metadata and remote configuration only.
 
-- [ ] Initialize Git with `main` as the default branch.
-- [ ] Create public GitHub repository `gvbaydaeva-lang/bastaeva-meat-catalog` without an extra README.
-- [ ] Commit the verified project and push `main` to `origin`.
-- [ ] Verify remote URL, remote HEAD, repository visibility, and absence of a Pages workflow.
+- [x] Initialize Git with `main` as the default branch.
+- [x] Create public GitHub repository `gvbaydaeva-lang/bastaeva-meat-catalog` without an extra README.
+- [x] Commit the verified project and push `main` to `origin`.
+- [x] Verify remote URL, remote HEAD, repository visibility, and absence of a Pages workflow.
