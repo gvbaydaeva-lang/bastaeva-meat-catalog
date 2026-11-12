@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <div className="container-shell py-28 text-center"><p className="eyebrow">404</p><h1 className="mt-3 font-display text-6xl">Страница не найдена</h1><p className="mx-auto mt-5 max-w-md text-ink/60">Проверьте адрес или вернитесь в каталог.</p><Link className="focus-ring mt-8 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-bold text-cream" href="/catalog">Открыть каталог</Link></div>; }
