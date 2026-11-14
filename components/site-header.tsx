@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { storeContact } from "@/lib/data";
 
 const links = [
-  ["Каталог", "/catalog"], ["О магазине", "/about"], ["Качество", "/quality"],
+  ["Каталог", "/catalog"], ["Подборки", "/collections"], ["О магазине", "/about"], ["Качество", "/quality"],
   ["Рецепты", "/recipes"], ["Доставка", "/delivery"], ["Контакты", "/contacts"]
 ] as const;
 

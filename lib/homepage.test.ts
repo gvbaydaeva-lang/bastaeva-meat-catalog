@@ -6,11 +6,11 @@ describe("homepage content foundation", () => {
     expect(categories).toHaveLength(6);
     expect(categories.map((category) => category.name)).toEqual([
       "Мясо",
-      "Птица",
-      "Колбасы",
-      "Полуфабрикаты",
-      "Деликатесы",
-      "Для гриля"
+      "Фарш",
+      "Домашняя птица",
+      "Субпродукты и суповые наборы",
+      "Домашние полуфабрикаты",
+      "Национальная продукция"
     ]);
   });
 

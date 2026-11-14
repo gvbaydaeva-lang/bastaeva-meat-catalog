@@ -5,16 +5,41 @@ export type Category = {
   name: string;
   description: string;
   imageLabel: string;
+  subcategorySlugs: string[];
 };
+
+export type Subcategory = {
+  slug: string;
+  categorySlug: string;
+  name: string;
+  description: string;
+  imageLabel: string;
+};
+
+export type ProductTag = "new" | "popular" | "recommended";
 
 export type Product = {
   slug: string;
   name: string;
   categorySlug: string;
+  subcategorySlug: string;
   description: string;
   price: number | null;
+  saleUnit: "kg" | "piece" | "package" | null;
+  composition: string | null;
+  characteristics: string[];
+  photos: string[];
   availability: AvailabilityStatus;
   imageLabel: string;
+  purpose: string[];
+  tags: ProductTag[];
+};
+
+export type Collection = {
+  slug: string;
+  name: string;
+  description: string;
+  productSlugs: string[];
 };
 
 export type Recipe = {
