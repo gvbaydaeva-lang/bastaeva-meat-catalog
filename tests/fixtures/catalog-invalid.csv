@@ -1,0 +1,2 @@
+slug;name;categorySlug;subcategorySlug;description;details;priceOptions;composition;characteristics;photos;availability;imageLabel;purpose;preparation;tags
+bad-csv;Ошибка CSV;not-a-category;semi-manti;Тестовая ошибка;;0~0~box;;;https://example.com/photo.jpg;available;Тест;;;

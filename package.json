@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "catalog:validate": "vite-node scripts/validate-catalog.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "broken-product",
+    "name": "Неверный товар",
+    "categorySlug": "not-a-category",
+    "subcategorySlug": "semi-manti",
+    "description": "Тестовая ошибка",
+    "priceOptions": [{ "label": "", "price": 0, "saleUnit": "box" }],
+    "composition": null,
+    "characteristics": [],
+    "photos": ["https://example.com/photo.jpg"],
+    "availability": "available",
+    "imageLabel": "Тест",
+    "purpose": [],
+    "tags": []
+  },
+  {
+    "slug": "broken-product",
+    "name": "Неверный товар",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-manti",
+    "description": "Дубликат",
+    "priceOptions": [],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Тест",
+    "purpose": [],
+    "tags": []
+  }
+]

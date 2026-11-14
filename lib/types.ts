@@ -17,6 +17,31 @@ export type Subcategory = {
 };
 
 export type ProductTag = "new" | "popular" | "recommended";
+export type SaleUnit = "kg" | "piece" | "package";
+
+export type PriceOption = {
+  label: string;
+  price: number;
+  saleUnit: SaleUnit;
+};
+
+export type CatalogProductInput = {
+  slug: string;
+  name: string;
+  categorySlug: string;
+  subcategorySlug: string;
+  description: string;
+  details?: string | null;
+  priceOptions: PriceOption[];
+  composition: string | null;
+  characteristics: string[];
+  photos: string[];
+  availability: AvailabilityStatus;
+  imageLabel: string;
+  purpose: string[];
+  preparation?: string[];
+  tags: ProductTag[];
+};
 
 export type Product = {
   slug: string;
@@ -26,7 +51,8 @@ export type Product = {
   description: string;
   details?: string | null;
   price: number | null;
-  saleUnit: "kg" | "piece" | "package" | null;
+  saleUnit: SaleUnit | null;
+  priceOptions?: PriceOption[];
   composition: string | null;
   characteristics: string[];
   photos: string[];

@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "test-manti",
+    "name": "Тестовые манты",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-manti",
+    "description": "Тестовая запись, не для публикации",
+    "details": null,
+    "priceOptions": [{ "label": "Упаковка", "price": 450, "saleUnit": "package" }],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Тестовое фото",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  }
+]

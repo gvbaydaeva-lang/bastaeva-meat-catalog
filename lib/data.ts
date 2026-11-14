@@ -1,4 +1,6 @@
 import type { Category, Collection, Product, Recipe, Subcategory } from "./types";
+import catalogProductSource from "../data/catalog-products.json";
+import { normalizeCatalogProducts } from "./catalog-import";
 
 export const storeContact = {
   address: "г. Элиста, 8 микрорайон, бульвар Бембеева, 8",
@@ -24,7 +26,7 @@ export const subcategories: Subcategory[] = [
   ["national-dotur", "national-products", "Дотур"], ["national-kazy", "national-products", "Казы"], ["national-blood-sausage", "national-products", "Кровяная колбаса"]
 ].map(([slug, categorySlug, name]) => ({ slug, categorySlug, name, description: "Ассортимент уточняется.", imageLabel: "Фото подкатегории уточняется" }));
 
-export const products: Product[] = [];
+export const products: Product[] = normalizeCatalogProducts(catalogProductSource);
 
 export const collections: Collection[] = [
   { slug: "soup", name: "Для супа", description: "Подборка продуктов для супа появится после подтверждения ассортимента.", productSlugs: [] },
