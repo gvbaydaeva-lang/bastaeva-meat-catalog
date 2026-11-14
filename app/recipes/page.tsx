@@ -1,6 +1,9 @@
 import { PageHeading } from "@/components/page-heading";
 import { EmptyContent } from "@/components/empty-content";
 import { recipes, recipeCategories } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata = buildPageMetadata({ title: "Рецепты с мясом — ИП Бастаева А.Д.", description: "Раздел рецептов ИП Бастаева А.Д. в Элисте. Публикация рецептов начнётся после согласования материалов.", path: "/recipes" });
 
 export default function RecipesPage() {
   return <div className="container-shell py-12">

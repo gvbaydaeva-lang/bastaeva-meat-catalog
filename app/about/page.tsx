@@ -4,6 +4,9 @@ import { InfoSection } from "@/components/info-section";
 import { PageHeading } from "@/components/page-heading";
 import { PlaceholderMedia } from "@/components/placeholder-media";
 import { aboutSections } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata = buildPageMetadata({ title: "О магазине ИП Бастаева А.Д.", description: "Информация о мясном магазине ИП Бастаева А.Д. в Элисте. Подтверждённые сведения будут добавляться постепенно.", path: "/about" });
 
 export default function AboutPage() {
   return <div>

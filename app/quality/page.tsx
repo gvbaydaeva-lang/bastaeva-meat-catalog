@@ -4,6 +4,9 @@ import { InfoSection } from "@/components/info-section";
 import { PageHeading } from "@/components/page-heading";
 import { PlaceholderMedia } from "@/components/placeholder-media";
 import { qualitySections } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata = buildPageMetadata({ title: "Качество и подтверждающие сведения", description: "Раздел качества ИП Бастаева А.Д.: состав, происхождение, хранение и документы только после проверки материалов.", path: "/quality" });
 
 export default function QualityPage() {
   return <div>

@@ -3,9 +3,15 @@ import { PageHeading } from "@/components/page-heading";
 import { CatalogBrowser } from "@/components/catalog-browser";
 import { getCollection, getProductsByCollection } from "@/lib/data";
 import { getCollectionRouteParams } from "@/lib/catalog-routes";
+import { buildPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getCollectionRouteParams();
+}
+
+export function generateMetadata({ params }: { params: { collection: string } }) {
+  const collection = getCollection(params.collection);
+  return collection ? buildPageMetadata({ title: `${collection.name} — подборка`, description: collection.description, path: `/collections/${collection.slug}` }) : buildPageMetadata({ title: "Подборка каталога", description: "Подборка каталога ИП Бастаева А.Д.", path: "/collections" });
 }
 
 export default function CollectionPage({ params }: { params: { collection: string } }) {

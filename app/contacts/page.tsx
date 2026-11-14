@@ -3,6 +3,9 @@ import { PageHeading } from "@/components/page-heading";
 import { ContactLinks } from "@/components/contact-links";
 import { YandexMap } from "@/components/yandex-map";
 import { storeContact } from "@/lib/data";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata = buildPageMetadata({ title: "Контакты мясного магазина в Элисте", description: "Телефон, адрес и карта магазина ИП Бастаева А.Д. в Элисте. Актуальные условия можно уточнить напрямую.", path: "/contacts" });
 
 export default function ContactsPage() {
   return <div className="container-shell py-12">
