@@ -11,6 +11,14 @@ npm run dev
 
 Откройте [http://localhost:3000](http://localhost:3000).
 
+## Публикация
+
+После push в `main` GitHub Actions собирает статическую версию и публикует её на GitHub Pages:
+
+[https://gvbaydaeva-lang.github.io/bastaeva-meat-catalog/](https://gvbaydaeva-lang.github.io/bastaeva-meat-catalog/)
+
+Настройки публикации находятся в `.github/workflows/deploy-pages.yml`. Для локального запуска базовый путь не используется; он добавляется только в сборке GitHub Actions.
+
 ## Проверки
 
 ```bash
