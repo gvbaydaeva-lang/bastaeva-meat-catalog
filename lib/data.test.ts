@@ -72,7 +72,7 @@ describe("catalog seed data", () => {
   });
 
   it("keeps recipes separate from products", () => {
-    expect(recipes.length).toBeGreaterThan(0);
+    expect(recipes).toEqual([]);
     expect(recipes.every((recipe) => !("price" in recipe))).toBe(true);
   });
 });

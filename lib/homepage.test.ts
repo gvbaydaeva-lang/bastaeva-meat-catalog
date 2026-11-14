@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { categories, storeContact } from "./data";
+import { categories, products, storeContact } from "./data";
+import { getPopularProducts, recipes } from "./content";
 
 describe("homepage content foundation", () => {
   it("keeps the six catalog categories available for the homepage", () => {
@@ -20,5 +21,17 @@ describe("homepage content foundation", () => {
       phone: "+7 927 590-55-88",
       phoneHref: "tel:+79275905588"
     });
+  });
+
+  it("does not create popular product cards when the catalog is empty", () => {
+    expect(getPopularProducts([])).toEqual([]);
+  });
+
+  it("keeps recipes unpublished until confirmed materials exist", () => {
+    expect(recipes).toEqual([]);
+  });
+
+  it("does not treat products without a popular tag as popular", () => {
+    expect(getPopularProducts(products)).toEqual([]);
   });
 });

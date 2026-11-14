@@ -1,6 +1,7 @@
-import type { Category, Collection, Product, Recipe, Subcategory } from "./types";
+import type { Category, Collection, Product, Subcategory } from "./types";
 import catalogProductSource from "../data/catalog-products.json";
 import { normalizeCatalogProducts } from "./catalog-import";
+import { recipes as contentRecipes } from "./content";
 
 export const storeContact = {
   address: "г. Элиста, 8 микрорайон, бульвар Бембеева, 8",
@@ -37,10 +38,7 @@ export const collections: Collection[] = [
   { slug: "national-dishes", name: "Национальные блюда", description: "Подборка для национальных блюд появится после подтверждения ассортимента.", productSlugs: [] }
 ];
 
-export const recipes: Recipe[] = [
-  { slug: "recipe-1", title: "Рецепт уточняется", excerpt: "Материалы для раздела рецептов будут добавлены отдельно.", imageLabel: "Фото рецепта уточняется" },
-  { slug: "recipe-2", title: "Рецепт уточняется", excerpt: "Содержание появится после согласования с владельцем магазина.", imageLabel: "Фото рецепта уточняется" }
-];
+export const recipes = contentRecipes;
 
 export function getCategory(slug: string) {
   return categories.find((category) => category.slug === slug);
