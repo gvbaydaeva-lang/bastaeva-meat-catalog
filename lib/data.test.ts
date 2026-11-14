@@ -8,10 +8,34 @@ import {
   isProductReferenceValid,
   subcategories,
   products,
-  recipes
+  recipes,
+  contactChannels,
+  getActiveContactChannels,
+  getYandexRouteUrl,
+  storeContact
 } from "./data";
 
 describe("catalog seed data", () => {
+  it("keeps verified store contact routing in one source", () => {
+    expect(storeContact).toMatchObject({
+      address: "Республика Калмыкия, г. Элиста, 8 микрорайон, бульвар Бембеева, 8",
+      phone: "+7 927 590-55-88",
+      phoneHref: "tel:+79275905588",
+      coordinates: { latitude: 46.304724, longitude: 44.312429 }
+    });
+    expect(storeContact.routeHref).toBe(getYandexRouteUrl(storeContact.address));
+  });
+
+  it("does not activate unconfirmed messenger channels", () => {
+    expect(contactChannels.map(({ id, href }) => ({ id, href }))).toEqual([
+      { id: "telegram", href: null },
+      { id: "whatsapp", href: null },
+      { id: "viber", href: null },
+      { id: "vk", href: null }
+    ]);
+    expect(getActiveContactChannels()).toEqual([]);
+  });
+
   it("contains the six ТЗ categories with unique slugs", () => {
     expect(categories).toHaveLength(6);
     expect(new Set(categories.map((category) => category.slug)).size).toBe(6);

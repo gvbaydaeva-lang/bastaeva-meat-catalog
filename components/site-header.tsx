@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { storeContact } from "@/lib/data";
@@ -27,6 +27,7 @@ export function SiteHeader() {
     <div className={cn("border-t border-line bg-cream lg:hidden", open ? "block" : "hidden")}>
       <nav className="container-shell flex flex-col gap-1 py-4" aria-label="Мобильная навигация">
         {links.map(([label, href]) => <Link className="focus-ring rounded-lg px-3 py-3 text-base hover:bg-white" key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
+        <a className="button-primary mt-3" href={storeContact.phoneHref}><Phone size={16} /> {storeContact.phone}</a>
       </nav>
     </div>
   </header>;

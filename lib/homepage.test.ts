@@ -16,11 +16,9 @@ describe("homepage content foundation", () => {
   });
 
   it("uses the confirmed store contact details", () => {
-    expect(storeContact).toEqual({
-      address: "г. Элиста, 8 микрорайон, бульвар Бембеева, 8",
-      phone: "+7 927 590-55-88",
-      phoneHref: "tel:+79275905588"
-    });
+    expect(storeContact.address).toBe("Республика Калмыкия, г. Элиста, 8 микрорайон, бульвар Бембеева, 8");
+    expect(storeContact.phone).toBe("+7 927 590-55-88");
+    expect(storeContact.phoneHref).toBe("tel:+79275905588");
   });
 
   it("does not create popular product cards when the catalog is empty", () => {
