@@ -72,7 +72,10 @@ export function getCollection(slug: string) {
 export function getProductsByCollection(collectionSlug: string) {
   const collection = getCollection(collectionSlug);
   if (!collection) return [];
-  return collection.productSlugs.flatMap((productSlug) => {
+  const explicitSlugs = collection.productSlugs.length
+    ? collection.productSlugs
+    : products.filter((product) => product.purpose.includes(collectionSlug)).map((product) => product.slug);
+  return explicitSlugs.flatMap((productSlug) => {
     const product = getProduct(productSlug);
     return product ? [product] : [];
   });
