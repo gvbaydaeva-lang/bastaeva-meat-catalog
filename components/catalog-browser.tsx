@@ -5,6 +5,7 @@ import { categories, subcategories } from "@/lib/data";
 import { DEFAULT_CATALOG_FILTERS, filterAndSortProducts, getAvailableSubcategories, meatTypeOptions, type CatalogFilters } from "@/lib/catalog-filters";
 import type { Product } from "@/lib/types";
 import { ProductCard } from "./product-card";
+import { ContactButtons } from "./contact-buttons";
 
 const purposeOptions = [["soup", "Для супа"], ["frying", "Для жарки"], ["stewing", "Для тушения"], ["grill", "Для гриля"], ["quick-dinner", "Быстрый ужин"], ["national-dishes", "Национальные блюда"]] as const;
 const availabilityOptions = [["all", "Любой статус"], ["in-stock", "В наличии"], ["out-of-stock", "Нет в наличии"], ["unknown", "Наличие уточняется"]] as const;
@@ -62,6 +63,6 @@ export function CatalogBrowser({ products, initialCategorySlug = "", initialSubc
       </div>
       <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line pt-4"><span className="text-xs font-bold uppercase tracking-wide text-ink/50">Активные фильтры:</span>{activeLabels.length ? activeLabels.map((label) => <span key={label} className="rounded-full bg-[#F2E9DF] px-3 py-1 text-xs text-ink/70">{label}</span>) : <span className="text-sm text-ink/50">нет</span>}<button type="button" onClick={reset} className="focus-ring ml-auto text-sm font-bold text-terracotta disabled:cursor-not-allowed disabled:opacity-40" disabled={!activeLabels.length}>Сбросить фильтры</button></div>
     </div>
-    {filtered.length ? <div className="grid gap-5 md:grid-cols-2">{filtered.map((product) => <ProductCard key={product.slug} product={product} />)}</div> : <div className="rounded-2xl border border-dashed border-line p-10 text-center text-ink/60">{products.length ? "Ничего не найдено. Измените запрос или сбросьте фильтры." : "Ассортимент пока не опубликован. Товары появятся после подтверждения данных."}</div>}
+    {filtered.length ? <div className="grid gap-5 md:grid-cols-2">{filtered.map((product) => <ProductCard key={product.slug} product={product} />)}</div> : <div className="rounded-2xl border border-dashed border-line p-10 text-center text-ink/60"><p>{products.length ? "Ничего не найдено. Измените запрос или сбросьте фильтры." : "Ассортимент пока не опубликован. Товары появятся после подтверждения данных."}</p><div className="mt-6"><ContactButtons /></div></div>}
   </div>;
 }

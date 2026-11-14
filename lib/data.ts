@@ -3,11 +3,37 @@ import catalogProductSource from "../data/catalog-products.json";
 import { normalizeCatalogProducts } from "./catalog-import";
 import { recipes as contentRecipes } from "./content";
 
+export type ContactChannelId = "telegram" | "whatsapp" | "viber" | "vk";
+
+export type ContactChannel = {
+  id: ContactChannelId;
+  label: string;
+  href: string | null;
+};
+
 export const storeContact = {
-  address: "г. Элиста, 8 микрорайон, бульвар Бембеева, 8",
+  address: "Республика Калмыкия, г. Элиста, 8 микрорайон, бульвар Бембеева, 8",
   phone: "+7 927 590-55-88",
-  phoneHref: "tel:+79275905588"
+  phoneHref: "tel:+79275905588",
+  coordinates: { latitude: 46.304724, longitude: 44.312429 },
+  routeHref: "https://yandex.ru/maps/?rtext=~%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%9A%D0%B0%D0%BB%D0%BC%D1%8B%D0%BA%D0%B8%D1%8F%2C%20%D0%B3.%20%D0%AD%D0%BB%D0%B8%D1%81%D1%82%D0%B0%2C%208%20%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%91%D0%B5%D0%BC%D0%B1%D0%B5%D0%B5%D0%B2%D0%B0%2C%208&rtt=auto",
+  mapEmbedHref: "https://yandex.ru/map-widget/v1/?ll=44.312429%2C46.304724&z=17&l=map&pt=44.312429%2C46.304724%2Cpm2rdm"
 } as const;
+
+export function getYandexRouteUrl(address: string) {
+  return `https://yandex.ru/maps/?rtext=~${encodeURIComponent(address)}&rtt=auto`;
+}
+
+export const contactChannels: readonly ContactChannel[] = [
+  { id: "telegram", label: "Telegram", href: null },
+  { id: "whatsapp", label: "WhatsApp", href: null },
+  { id: "viber", label: "Viber", href: null },
+  { id: "vk", label: "ВКонтакте", href: null }
+];
+
+export function getActiveContactChannels() {
+  return contactChannels.filter((channel): channel is ContactChannel & { href: string } => Boolean(channel.href));
+}
 
 export const categories: Category[] = [
   { slug: "meat", name: "Мясо", description: "Баранина, телятина и домашняя свинина. Ассортимент уточняется.", imageLabel: "Фото категории уточняется", subcategorySlugs: ["meat-merino-lamb", "meat-steppe-veal", "meat-young-pork"] },

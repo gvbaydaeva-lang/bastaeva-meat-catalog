@@ -26,6 +26,11 @@ export function getProductInquiryMessage(productName: string) {
   return `Здравствуйте! Подскажите, пожалуйста, есть ли в наличии ${productName}?`;
 }
 
+export function getProductInquiryUrl(channelHref: string, productName: string) {
+  const separator = channelHref.includes("?") ? "&" : "?";
+  return `${channelHref}${separator}text=${encodeURIComponent(getProductInquiryMessage(productName))}`;
+}
+
 export function getSimilarProducts(product: Product, allProducts: Product[], limit = 4) {
   const candidates = allProducts.filter((candidate) => candidate.slug !== product.slug);
   const sameSubcategory = candidates.filter((candidate) => candidate.subcategorySlug === product.subcategorySlug);
