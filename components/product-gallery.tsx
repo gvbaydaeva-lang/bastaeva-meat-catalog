@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { Product } from "@/lib/types";
 import { PlaceholderMedia } from "./placeholder-media";
+import { analyticsEvents, trackYandexEvent } from "@/lib/analytics";
 
 function GalleryImage({ src, alt, priority = false, className = "" }: { src: string; alt: string; priority?: boolean; className?: string }) {
   return <Image src={src} alt={alt} fill sizes="(max-width: 1024px) 100vw, 55vw" priority={priority} className={`object-contain ${className}`} unoptimized />;
@@ -16,6 +17,8 @@ export function ProductGallery({ product }: { product: Product }) {
   const photos = product.photos;
   const hasPhotos = photos.length > 0;
   const activePhoto = photos[activeIndex];
+
+  useEffect(() => { trackYandexEvent(analyticsEvents.productView, { product: product.slug }); }, [product.slug]);
 
   useEffect(() => {
     if (!isZoomOpen) return;

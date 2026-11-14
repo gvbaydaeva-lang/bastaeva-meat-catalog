@@ -3,9 +3,15 @@ import { PageHeading } from "@/components/page-heading";
 import { CatalogBrowser } from "@/components/catalog-browser";
 import { getCategory, getProductsBySubcategory, getSubcategory } from "@/lib/data";
 import { getSubcategoryRouteParams } from "@/lib/catalog-routes";
+import { buildPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getSubcategoryRouteParams();
+}
+
+export function generateMetadata({ params }: { params: { category: string; subcategory: string } }) {
+  const subcategory = getSubcategory(params.subcategory);
+  return subcategory ? buildPageMetadata({ title: `${subcategory.name} — каталог в Элисте`, description: `${subcategory.description} Каталог ИП Бастаева А.Д. в Элисте.`, path: `/catalog/${params.category}/${subcategory.slug}` }) : buildPageMetadata({ title: "Подкатегория каталога", description: "Подкатегория каталога ИП Бастаева А.Д.", path: "/catalog" });
 }
 
 export default function SubcategoryPage({ params }: { params: { category: string; subcategory: string } }) {

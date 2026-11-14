@@ -4,8 +4,14 @@ import { CatalogBrowser } from "@/components/catalog-browser";
 import { SubcategoryCard } from "@/components/subcategory-card";
 import { getCategory, getProductsByCategory, subcategories } from "@/lib/data";
 import { getCategoryRouteParams } from "@/lib/catalog-routes";
+import { buildPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() { return getCategoryRouteParams(); }
+
+export function generateMetadata({ params }: { params: { category: string } }) {
+  const category = getCategory(params.category);
+  return category ? buildPageMetadata({ title: `${category.name} — каталог в Элисте`, description: `${category.description} Каталог ИП Бастаева А.Д. в Элисте.`, path: `/catalog/${category.slug}` }) : buildPageMetadata({ title: "Категория каталога", description: "Категория каталога ИП Бастаева А.Д.", path: "/catalog" });
+}
 
 export default function CategoryPage({ params }: { params: { category: string } }) {
   const category = getCategory(params.category); if (!category) notFound();
