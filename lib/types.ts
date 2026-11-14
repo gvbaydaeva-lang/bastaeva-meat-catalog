@@ -24,6 +24,7 @@ export type Product = {
   categorySlug: string;
   subcategorySlug: string;
   description: string;
+  details?: string | null;
   price: number | null;
   saleUnit: "kg" | "piece" | "package" | null;
   composition: string | null;
@@ -32,6 +33,7 @@ export type Product = {
   availability: AvailabilityStatus;
   imageLabel: string;
   purpose: string[];
+  preparation?: string[];
   tags: ProductTag[];
 };
 
