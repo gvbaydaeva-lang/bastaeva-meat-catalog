@@ -10,8 +10,9 @@ const nextConfig = {
   ...(isGitHubPagesBuild
     ? {
         basePath: "/bastaeva-meat-catalog",
+        env: { NEXT_PUBLIC_BASE_PATH: "/bastaeva-meat-catalog" },
       }
-    : {}),
+    : { env: { NEXT_PUBLIC_BASE_PATH: "" } }),
 };
 
 export default nextConfig;

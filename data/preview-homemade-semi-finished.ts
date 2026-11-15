@@ -1,0 +1,120 @@
+import type { Product } from "@/lib/types";
+
+const categorySlug = "homemade-semi-finished";
+
+const previewNote = "Название и состав требуют подтверждения. Цена не указана до согласования.";
+
+export const homemadeSemiFinishedPreviewProducts: Product[] = [
+  {
+    slug: "preview-beriki",
+    name: "Берики",
+    categorySlug,
+    subcategorySlug: "semi-beriki",
+    description: previewNote,
+    price: null,
+    saleUnit: null,
+    composition: null,
+    characteristics: [],
+    photos: ["/images/products/homemade-semi-finished/semi-beriki/beriki.jpg"],
+    availability: "unknown",
+    imageLabel: "Фото бериков",
+    purpose: [],
+    tags: []
+  },
+  {
+    slug: "preview-chicken-cutlets",
+    name: "Куриные котлеты",
+    categorySlug,
+    subcategorySlug: "semi-cutlets",
+    description: previewNote,
+    price: null,
+    saleUnit: null,
+    composition: null,
+    characteristics: [],
+    photos: ["/images/products/homemade-semi-finished/semi-cutlets/chicken-cutlets.jpg"],
+    availability: "unknown",
+    imageLabel: "Фото куриных котлет",
+    purpose: [],
+    tags: []
+  },
+  {
+    slug: "preview-meat-cutlets",
+    name: "Мясные котлеты",
+    categorySlug,
+    subcategorySlug: "semi-cutlets",
+    description: previewNote,
+    price: null,
+    saleUnit: null,
+    composition: null,
+    characteristics: [],
+    photos: ["/images/products/homemade-semi-finished/semi-cutlets/meat-cutlets.jpg"],
+    availability: "unknown",
+    imageLabel: "Фото мясных котлет",
+    purpose: [],
+    tags: []
+  },
+  {
+    slug: "preview-vareniki",
+    name: "Вареники",
+    categorySlug,
+    subcategorySlug: "semi-dumplings",
+    description: previewNote,
+    price: null,
+    saleUnit: null,
+    composition: null,
+    characteristics: [],
+    photos: ["/images/products/homemade-semi-finished/semi-dumplings/vareniki.jpg"],
+    availability: "unknown",
+    imageLabel: "Фото вареников",
+    purpose: [],
+    tags: []
+  },
+  {
+    slug: "preview-kupaty",
+    name: "Купаты",
+    categorySlug,
+    subcategorySlug: "semi-kupaty",
+    description: previewNote,
+    price: null,
+    saleUnit: null,
+    composition: null,
+    characteristics: [],
+    photos: ["/images/products/homemade-semi-finished/semi-kupaty/kupaty.jpg"],
+    availability: "unknown",
+    imageLabel: "Фото купатов",
+    purpose: [],
+    tags: []
+  },
+  {
+    slug: "preview-manti",
+    name: "Манты",
+    categorySlug,
+    subcategorySlug: "semi-manti",
+    description: previewNote,
+    price: null,
+    saleUnit: null,
+    composition: null,
+    characteristics: [],
+    photos: ["/images/products/homemade-semi-finished/semi-manti/manti.jpg"],
+    availability: "unknown",
+    imageLabel: "Фото мантов",
+    purpose: [],
+    tags: []
+  },
+  {
+    slug: "preview-filled-blini",
+    name: "Блины",
+    categorySlug,
+    subcategorySlug: "semi-pancakes",
+    description: previewNote,
+    price: null,
+    saleUnit: null,
+    composition: null,
+    characteristics: [],
+    photos: ["/images/products/homemade-semi-finished/semi-pancakes/filled-blini.jpg"],
+    availability: "unknown",
+    imageLabel: "Фото блинов",
+    purpose: [],
+    tags: []
+  }
+];
