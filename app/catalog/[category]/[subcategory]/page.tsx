@@ -9,14 +9,16 @@ export function generateStaticParams() {
   return getSubcategoryRouteParams();
 }
 
-export function generateMetadata({ params }: { params: { category: string; subcategory: string } }) {
-  const subcategory = getSubcategory(params.subcategory);
-  return subcategory ? buildPageMetadata({ title: `${subcategory.name} — каталог в Элисте`, description: `${subcategory.description} Каталог ИП Бастаева А.Д. в Элисте.`, path: `/catalog/${params.category}/${subcategory.slug}` }) : buildPageMetadata({ title: "Подкатегория каталога", description: "Подкатегория каталога ИП Бастаева А.Д.", path: "/catalog" });
+export async function generateMetadata({ params }: { params: Promise<{ category: string; subcategory: string }> }) {
+  const { category, subcategory: subcategorySlug } = await params;
+  const subcategory = getSubcategory(subcategorySlug);
+  return subcategory ? buildPageMetadata({ title: `${subcategory.name} — каталог в Элисте`, description: `${subcategory.description} Каталог ИП Бастаева А.Д. в Элисте.`, path: `/catalog/${category}/${subcategory.slug}` }) : buildPageMetadata({ title: "Подкатегория каталога", description: "Подкатегория каталога ИП Бастаева А.Д.", path: "/catalog" });
 }
 
-export default function SubcategoryPage({ params }: { params: { category: string; subcategory: string } }) {
-  const category = getCategory(params.category);
-  const subcategory = getSubcategory(params.subcategory);
+export default async function SubcategoryPage({ params }: { params: Promise<{ category: string; subcategory: string }> }) {
+  const { category: categorySlug, subcategory: subcategorySlug } = await params;
+  const category = getCategory(categorySlug);
+  const subcategory = getSubcategory(subcategorySlug);
   if (!category || !subcategory || subcategory.categorySlug !== category.slug) notFound();
   const items = getProductsBySubcategory(subcategory.slug);
   return <div className="container-shell py-12"><PageHeading eyebrow="Каталог · подкатегория" title={subcategory.name} description={subcategory.description} crumbs={[{ label: "Каталог", href: "/catalog" }, { label: category.name, href: `/catalog/${category.slug}` }, { label: subcategory.name }]} /><div className="py-12"><CatalogBrowser products={items} initialCategorySlug={category.slug} initialSubcategorySlug={subcategory.slug} /></div></div>;

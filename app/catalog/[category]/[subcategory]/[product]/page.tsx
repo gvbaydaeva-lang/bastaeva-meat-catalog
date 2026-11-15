@@ -12,14 +12,15 @@ import { buildPageMetadata } from "@/lib/seo";
 import { buildProductJsonLd } from "@/lib/seo";
 import { StructuredData } from "@/components/structured-data";
 
-type ProductPageProps = { params: { category: string; subcategory: string; product: string } };
+type ProductPageProps = { params: Promise<{ category: string; subcategory: string; product: string }> };
 
 const tagLabels = { new: "Новинка", popular: "Популярное", recommended: "Рекомендуем" } as const;
 
-export function generateMetadata({ params }: ProductPageProps): Metadata {
-  const product = getProduct(params.product);
+export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  const { category, subcategory, product: productSlug } = await params;
+  const product = getProduct(productSlug);
   if (!product) return buildPageMetadata({ title: "Товар уточняется — ИП Бастаева А.Д.", description: "Страница товара появится после подтверждения ассортимента.", path: "/catalog" });
-  return buildPageMetadata({ title: `${product.name} — ИП Бастаева А.Д.`, description: product.description, path: `/catalog/${params.category}/${params.subcategory}/${params.product}` });
+  return buildPageMetadata({ title: `${product.name} — ИП Бастаева А.Д.`, description: product.description, path: `/catalog/${category}/${subcategory}/${productSlug}` });
 }
 
 export function generateStaticParams() {
@@ -30,12 +31,13 @@ export function generateStaticParams() {
     : [{ category: "meat", subcategory: "meat-merino-lamb", product: "__empty__" }];
 }
 
-export default function NestedProductPage({ params }: ProductPageProps) {
-  const category = getCategory(params.category);
-  const subcategory = getSubcategory(params.subcategory);
-  const product = getProduct(params.product);
+export default async function NestedProductPage({ params }: ProductPageProps) {
+  const { category: categorySlug, subcategory: subcategorySlug, product: productSlug } = await params;
+  const category = getCategory(categorySlug);
+  const subcategory = getSubcategory(subcategorySlug);
+  const product = getProduct(productSlug);
   if (!category || !subcategory || subcategory.categorySlug !== category.slug) notFound();
-  if (!product && params.product === "__empty__") {
+  if (!product && productSlug === "__empty__") {
     return <div className="container-shell py-12"><PageHeading eyebrow="Каталог · товар" title="Товары пока не добавлены" description="Страница товара появится после передачи подтверждённого ассортимента." crumbs={[{ label: "Каталог", href: "/catalog" }, { label: category.name, href: `/catalog/${category.slug}` }, { label: subcategory.name, href: `/catalog/${category.slug}/${subcategory.slug}` }, { label: "Товар" }]} /><div className="py-12"><div className="rounded-2xl border border-dashed border-line p-10 text-center text-ink/60">В этой подкатегории пока нет опубликованных товаров.</div></div></div>;
   }
   if (!product || product.categorySlug !== category.slug || product.subcategorySlug !== subcategory.slug) notFound();

@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { categories, collections, products, recipes, subcategories } from "@/lib/data";
 import { getSeoConfig, getSitemapPaths } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const seo = getSeoConfig();
   if (!seo.shouldIndex) return [];
