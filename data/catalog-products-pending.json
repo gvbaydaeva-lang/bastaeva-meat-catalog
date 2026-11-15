@@ -1,0 +1,511 @@
+[
+  {
+    "slug": "beriki-veal-pork-pending",
+    "name": "Берики (свинина + телятина?)",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-beriki",
+    "description": "Берики по ассортиментной доске магазина. Состав в скобках требует подтверждения.",
+    "details": "На доске: 700 ₽/кг; первая часть названия в скобках читается не полностью.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 700,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта бериков уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "beriki-pork-pending",
+    "name": "Берики (свинина?)",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-beriki",
+    "description": "Берики по ассортиментной доске магазина. Вариант начинки требует подтверждения.",
+    "details": "На доске: 450 ₽/кг; чтение слова в скобках предположительное.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 450,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта бериков уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "salted-pork-fat",
+    "name": "Сало солёное",
+    "categorySlug": "meat",
+    "subcategorySlug": "meat-young-pork",
+    "description": "Солёное сало по ассортиментной доске магазина.",
+    "details": "Отнесение к подкатегории свинины требует согласования.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 650,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "kupaty-pork-beef",
+    "name": "Купаты (свинина + говядина)",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-kupaty",
+    "description": "Купаты по ассортиментной доске магазина.",
+    "details": "Состав в названии передан по доске; фото не привязано к конкретной разновидности.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 800,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта купатов уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "cutlets-pork-veal",
+    "name": "Котлеты (свинина + телятина)",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-cutlets",
+    "description": "Котлеты по ассортиментной доске магазина.",
+    "details": "Состав в названии передан по доске и требует подтверждения.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото мясных котлет уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "blood-sausage",
+    "name": "Кровяная колбаса",
+    "categorySlug": "national-products",
+    "subcategorySlug": "national-blood-sausage",
+    "description": "Кровяная колбаса по ассортиментной доске магазина.",
+    "details": "На доске указано 350 и рядом 400 г; единица продажи требует подтверждения.",
+    "priceOptions": [
+      {
+        "label": "Лоток 400 г — цена с доски",
+        "price": 350,
+        "saleUnit": "package"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "dotur-ready",
+    "name": "Дотур готовый",
+    "categorySlug": "national-products",
+    "subcategorySlug": "national-dotur",
+    "description": "Готовый дотур по ассортиментной доске магазина.",
+    "details": "На доске: 320 ₽ за лоток; рядом указано 400 г.",
+    "priceOptions": [
+      {
+        "label": "Лоток 400 г — цена с доски",
+        "price": 320,
+        "saleUnit": "package"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "horse-meat-kazy",
+    "name": "Казы (конина)",
+    "categorySlug": "national-products",
+    "subcategorySlug": "national-kazy",
+    "description": "Казы из конины по ассортиментной доске магазина.",
+    "details": "На фото читается 1 400 ₽/кг, но требуется согласовать возможное значение 1 100 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Вариант, прочитанный на фото",
+        "price": 1400,
+        "saleUnit": "kg"
+      },
+      {
+        "label": "Вариант на согласование",
+        "price": 1100,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "liver-in-net-sausage-pending",
+    "name": "Печень в сетке / колбаса?",
+    "categorySlug": "offal-soup-sets",
+    "subcategorySlug": "offal-liver",
+    "description": "Позиция с ассортиментной доски; точное название требует уточнения.",
+    "details": "Цена и единица продажи на фото не подтверждены.",
+    "priceOptions": [],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "kalmyk-stew-sausage-pending",
+    "name": "Калмыцкая тушёнка / колбаса?",
+    "categorySlug": "national-products",
+    "subcategorySlug": "national-blood-sausage",
+    "description": "Позиция с ассортиментной доски; точное название и подкатегория требуют уточнения.",
+    "details": "Цена на фото не подтверждена; временная подкатегория нужна только для структуры черновика.",
+    "priceOptions": [],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "dotur-fresh-merino",
+    "name": "Дотур свежий (комплект), меринос",
+    "categorySlug": "national-products",
+    "subcategorySlug": "national-dotur",
+    "description": "Свежий дотур, комплект, по ассортиментной доске магазина.",
+    "details": "На доске: 200 ₽/кг; отдельно от готового дотура.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 200,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "minced-mixed-with-fat",
+    "name": "Фарш смешанный с салом",
+    "categorySlug": "minced-meat",
+    "subcategorySlug": "minced-mixed",
+    "description": "Смешанный фарш с салом по ассортиментной доске магазина.",
+    "details": "На доске: 450 ₽/кг; точный состав требует подтверждения.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 450,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "soup-sets-pending",
+    "name": "Суповые наборы",
+    "categorySlug": "offal-soup-sets",
+    "subcategorySlug": "soup-sets",
+    "description": "Суповые наборы по ассортиментной доске магазина.",
+    "details": "На доске указано: 50 ₽/кг, 150 ₽/кг, до 250 ₽/кг; схема цен требует уточнения.",
+    "priceOptions": [
+      {
+        "label": "Вариант 1 с доски",
+        "price": 50,
+        "saleUnit": "kg"
+      },
+      {
+        "label": "Вариант 2 с доски",
+        "price": 150,
+        "saleUnit": "kg"
+      },
+      {
+        "label": "Верхняя граница с доски",
+        "price": 250,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "lamb-tongue",
+    "name": "Язык бараний",
+    "categorySlug": "offal-soup-sets",
+    "subcategorySlug": "offal-tongue",
+    "description": "Бараний язык по ассортиментной доске магазина.",
+    "details": "Разделено из одной строки доски «язык (баранина / говядина)»; цену нужно подтвердить для каждой разновидности.",
+    "priceOptions": [
+      {
+        "label": "Общая цена строки с доски",
+        "price": 1300,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "beef-tongue",
+    "name": "Язык говяжий",
+    "categorySlug": "offal-soup-sets",
+    "subcategorySlug": "offal-tongue",
+    "description": "Говяжий язык по ассортиментной доске магазина.",
+    "details": "Разделено из одной строки доски «язык (баранина / говядина)»; цену нужно подтвердить для каждой разновидности.",
+    "priceOptions": [
+      {
+        "label": "Общая цена строки с доски",
+        "price": 1300,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "home-chicken-meat-pending",
+    "name": "Курица домашняя — мясная",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-chicken",
+    "description": "Домашняя мясная курица по ассортиментной доске магазина.",
+    "details": "Цена 550 ₽/кг предположительно относится к группе строк; требуется подтверждение.",
+    "priceOptions": [
+      {
+        "label": "Предположительная групповая цена",
+        "price": 550,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "chicken-thighs-meaty-pending",
+    "name": "Окорочка мясные",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-parts",
+    "description": "Мясные окорочка по ассортиментной доске магазина.",
+    "details": "Цена 550 ₽/кг предположительно относится к группе строк; требуется подтверждение.",
+    "priceOptions": [
+      {
+        "label": "Предположительная групповая цена",
+        "price": 550,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "chicken-drumsticks-pending",
+    "name": "Голень куриная",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-parts",
+    "description": "Куриная голень по ассортиментной доске магазина.",
+    "details": "Цена 550 ₽/кг предположительно относится к группе строк; требуется подтверждение.",
+    "priceOptions": [
+      {
+        "label": "Предположительная групповая цена",
+        "price": 550,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "chicken-breast-pending",
+    "name": "Грудка куриная",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-parts",
+    "description": "Куриная грудка по ассортиментной доске магазина.",
+    "details": "Цена 550 ₽/кг предположительно относится к группе строк; требуется подтверждение.",
+    "priceOptions": [
+      {
+        "label": "Предположительная групповая цена",
+        "price": 550,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "duck",
+    "name": "Утка",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-duck",
+    "description": "Утка по ассортиментной доске магазина.",
+    "details": "Цена 750 ₽/кг записана общей строкой для утки, индейки и гуся; требуется подтверждение.",
+    "priceOptions": [
+      {
+        "label": "Предположительная общая цена",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "turkey",
+    "name": "Индейка",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-turkey",
+    "description": "Индейка по ассортиментной доске магазина.",
+    "details": "Цена 750 ₽/кг записана общей строкой для утки, индейки и гуся; требуется подтверждение.",
+    "priceOptions": [
+      {
+        "label": "Предположительная общая цена",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "goose",
+    "name": "Гусь",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-goose",
+    "description": "Гусь по ассортиментной доске магазина.",
+    "details": "Цена 750 ₽/кг записана общей строкой для утки, индейки и гуся; требуется подтверждение.",
+    "priceOptions": [
+      {
+        "label": "Предположительная общая цена",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  }
+]

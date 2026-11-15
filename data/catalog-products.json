@@ -1,1 +1,594 @@
-[]
+[
+  {
+    "slug": "beriki-large",
+    "name": "Берики большие",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-beriki",
+    "description": "Большие берики по ассортиментной доске магазина.",
+    "details": "На доске: 500 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 500,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото больших бериков уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "vareniki-potato",
+    "name": "Вареники с картошкой",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-dumplings",
+    "description": "Вареники с картошкой по ассортиментной доске магазина.",
+    "details": "На доске: 450 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 450,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта вареников уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "vareniki-cottage-cheese",
+    "name": "Вареники с творогом",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-dumplings",
+    "description": "Вареники с творогом по ассортиментной доске магазина.",
+    "details": "На доске: 450 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 450,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта вареников уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "kupaty-chicken",
+    "name": "Купаты куриные",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-kupaty",
+    "description": "Куриные купаты по ассортиментной доске магазина.",
+    "details": "На доске: 800 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 800,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото куриных купатов уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "stuffed-pepper",
+    "name": "Перец фаршированный",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-other",
+    "description": "Фаршированный перец по ассортиментной доске магазина.",
+    "details": "Общая подкатегория для полуфабрикатов, не относящихся к отдельной разновидности.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "chicken-schnitzel",
+    "name": "Шницель куриный (отбивная)",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-other",
+    "description": "Куриный шницель по ассортиментной доске магазина.",
+    "details": "В скобках на доске указано «отбивная».",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "cheese-sticks",
+    "name": "Сырные палочки",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-other",
+    "description": "Сырные палочки по ассортиментной доске магазина.",
+    "details": null,
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 650,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "meatballs",
+    "name": "Фрикадельки",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-meatballs",
+    "description": "Фрикадельки по ассортиментной доске магазина.",
+    "details": "На доске: 650 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 650,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "chicken-cutlets",
+    "name": "Котлеты куриные",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-cutlets",
+    "description": "Куриные котлеты по ассортиментной доске магазина.",
+    "details": "Единственное однозначное соответствие готового фото из проекта.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [
+      "/images/products/homemade-semi-finished/semi-cutlets/chicken-cutlets.jpg"
+    ],
+    "availability": "unknown",
+    "imageLabel": "Куриные котлеты",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "manti-veal",
+    "name": "Манты с телятиной",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-manti",
+    "description": "Манты с телятиной по ассортиментной доске магазина.",
+    "details": "На доске: 800 ₽/кг; фото мантов не привязано к начинке.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 800,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта мантов уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "manti-lamb",
+    "name": "Манты с бараниной",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-manti",
+    "description": "Манты с бараниной по ассортиментной доске магазина.",
+    "details": "На доске: 800 ₽/кг; фото мантов не привязано к начинке.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 800,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта мантов уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "blini-meat",
+    "name": "Блины с мясом",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-pancakes",
+    "description": "Блины с мясом по ассортиментной доске магазина.",
+    "details": "На доске: 650 ₽/кг; фото блинов не подтверждает начинку.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 650,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта блинов уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "blini-cottage-cheese",
+    "name": "Блины с творогом",
+    "categorySlug": "homemade-semi-finished",
+    "subcategorySlug": "semi-pancakes",
+    "description": "Блины с творогом по ассортиментной доске магазина.",
+    "details": "На доске: 450 ₽/кг; фото блинов не подтверждает начинку.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 450,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото варианта блинов уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "merino-lamb",
+    "name": "Баранина меринос",
+    "categorySlug": "meat",
+    "subcategorySlug": "meat-merino-lamb",
+    "description": "Баранина меринос по ассортиментной доске магазина.",
+    "details": "На доске указан диапазон 780–850 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "От",
+        "price": 780,
+        "saleUnit": "kg"
+      },
+      {
+        "label": "До",
+        "price": 850,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "steppe-veal",
+    "name": "Телятина степная",
+    "categorySlug": "meat",
+    "subcategorySlug": "meat-steppe-veal",
+    "description": "Степная телятина по ассортиментной доске магазина.",
+    "details": "На доске указан диапазон 550–850 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "От",
+        "price": 550,
+        "saleUnit": "kg"
+      },
+      {
+        "label": "До",
+        "price": 850,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "young-home-pork",
+    "name": "Свинина домашняя молодая",
+    "categorySlug": "meat",
+    "subcategorySlug": "meat-young-pork",
+    "description": "Домашняя молодая свинина по ассортиментной доске магазина.",
+    "details": "На доске указан диапазон 550–650 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "От",
+        "price": 550,
+        "saleUnit": "kg"
+      },
+      {
+        "label": "До",
+        "price": 650,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "minced-mixed-pork-veal",
+    "name": "Фарш смешанный (свинина + телятина)",
+    "categorySlug": "minced-meat",
+    "subcategorySlug": "minced-mixed",
+    "description": "Смешанный фарш по ассортиментной доске магазина.",
+    "details": "На доске: 800 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 800,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "minced-beef",
+    "name": "Фарш говяжий",
+    "categorySlug": "minced-meat",
+    "subcategorySlug": "minced-beef",
+    "description": "Говяжий фарш по ассортиментной доске магазина.",
+    "details": "На доске: 850 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 850,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "minced-pork",
+    "name": "Фарш свиной",
+    "categorySlug": "minced-meat",
+    "subcategorySlug": "minced-pork",
+    "description": "Свиной фарш по ассортиментной доске магазина.",
+    "details": "На доске: 700 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 700,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "minced-turkey",
+    "name": "Фарш из индейки",
+    "categorySlug": "minced-meat",
+    "subcategorySlug": "minced-turkey",
+    "description": "Фарш из индейки по ассортиментной доске магазина.",
+    "details": "На доске: 650 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 650,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "minced-chicken",
+    "name": "Фарш куриный",
+    "categorySlug": "minced-meat",
+    "subcategorySlug": "minced-chicken",
+    "description": "Куриный фарш по ассортиментной доске магазина.",
+    "details": "На доске: 650 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 650,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "home-chicken-soup",
+    "name": "Курица домашняя — суповая",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-chicken",
+    "description": "Домашняя суповая курица по ассортиментной доске магазина.",
+    "details": "На доске: 480 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 480,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "chicken-fillet",
+    "name": "Филе куриное",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-parts",
+    "description": "Куриное филе по ассортиментной доске магазина.",
+    "details": "На доске: 700 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 700,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "turkey-fillet",
+    "name": "Филе индейки",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-parts",
+    "description": "Филе индейки по ассортиментной доске магазина.",
+    "details": "На доске: 750 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 750,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  },
+  {
+    "slug": "chicken-wings",
+    "name": "Крылья куриные",
+    "categorySlug": "poultry",
+    "subcategorySlug": "poultry-parts",
+    "description": "Куриные крылья по ассортиментной доске магазина.",
+    "details": "На доске: 550 ₽/кг.",
+    "priceOptions": [
+      {
+        "label": "Цена с доски",
+        "price": 550,
+        "saleUnit": "kg"
+      }
+    ],
+    "composition": null,
+    "characteristics": [],
+    "photos": [],
+    "availability": "unknown",
+    "imageLabel": "Фото товара уточняется",
+    "purpose": [],
+    "preparation": [],
+    "tags": []
+  }
+]

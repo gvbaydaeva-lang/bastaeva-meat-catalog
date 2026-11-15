@@ -33,6 +33,17 @@ describe("product detail helpers", () => {
     expect(formatProductPrice(fixtureProduct({ price: 780, saleUnit: "kg" }))).toBe("780 ₽ / кг");
   });
 
+  it("formats confirmed price ranges without collapsing them to one price", () => {
+    expect(formatProductPrice(fixtureProduct({
+      price: 780,
+      saleUnit: "kg",
+      priceOptions: [
+        { label: "От", price: 780, saleUnit: "kg" },
+        { label: "До", price: 850, saleUnit: "kg" }
+      ]
+    }))).toBe("780–850 ₽ / кг");
+  });
+
   it("returns human-readable availability labels", () => {
     expect(getProductAvailabilityLabel("in-stock")).toBe("В наличии");
     expect(getProductAvailabilityLabel("out-of-stock")).toBe("Нет в наличии");

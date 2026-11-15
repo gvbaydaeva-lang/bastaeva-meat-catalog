@@ -1,4 +1,4 @@
-import type { Category, Collection, Product, Subcategory } from "./types";
+import type { CatalogProductInput, Category, Collection, Product, Subcategory } from "./types";
 import catalogProductSource from "../data/catalog-products.json";
 import { normalizeCatalogProducts } from "./catalog-import";
 import { recipes as contentRecipes } from "./content";
@@ -40,7 +40,7 @@ export const categories: Category[] = [
   { slug: "minced-meat", name: "Фарш", description: "Виды фарша для разных блюд. Ассортимент уточняется.", imageLabel: "Фото категории уточняется", subcategorySlugs: ["minced-mixed", "minced-beef", "minced-pork", "minced-turkey", "minced-chicken"] },
   { slug: "poultry", name: "Домашняя птица", description: "Домашняя птица и отдельные части. Ассортимент уточняется.", imageLabel: "Фото категории уточняется", subcategorySlugs: ["poultry-chicken", "poultry-turkey", "poultry-duck", "poultry-goose", "poultry-parts"] },
   { slug: "offal-soup-sets", name: "Субпродукты и суповые наборы", description: "Субпродукты и основы для супов. Ассортимент уточняется.", imageLabel: "Фото категории уточняется", subcategorySlugs: ["offal-tongue", "offal-liver", "soup-sets"] },
-  { slug: "homemade-semi-finished", name: "Домашние полуфабрикаты", description: "Домашние полуфабрикаты для удобного приготовления. Ассортимент уточняется.", imageLabel: "Фото категории уточняется", subcategorySlugs: ["semi-beriki", "semi-manti", "semi-dumplings", "semi-cutlets", "semi-kupaty", "semi-meatballs", "semi-pancakes"] },
+  { slug: "homemade-semi-finished", name: "Домашние полуфабрикаты", description: "Домашние полуфабрикаты для удобного приготовления. Ассортимент уточняется.", imageLabel: "Фото категории уточняется", subcategorySlugs: ["semi-beriki", "semi-manti", "semi-dumplings", "semi-cutlets", "semi-kupaty", "semi-meatballs", "semi-pancakes", "semi-other"] },
   { slug: "national-products", name: "Национальная продукция", description: "Традиционные мясные изделия. Ассортимент уточняется.", imageLabel: "Фото категории уточняется", subcategorySlugs: ["national-dotur", "national-kazy", "national-blood-sausage"] }
 ];
 
@@ -49,11 +49,11 @@ export const subcategories: Subcategory[] = [
   ["minced-mixed", "minced-meat", "Смешанный фарш"], ["minced-beef", "minced-meat", "Говяжий фарш"], ["minced-pork", "minced-meat", "Свиной фарш"], ["minced-turkey", "minced-meat", "Фарш из индейки"], ["minced-chicken", "minced-meat", "Куриный фарш"],
   ["poultry-chicken", "poultry", "Курица"], ["poultry-turkey", "poultry", "Индейка"], ["poultry-duck", "poultry", "Утка"], ["poultry-goose", "poultry", "Гусь"], ["poultry-parts", "poultry", "Части птицы"],
   ["offal-tongue", "offal-soup-sets", "Язык"], ["offal-liver", "offal-soup-sets", "Печень"], ["soup-sets", "offal-soup-sets", "Суповые наборы"],
-  ["semi-beriki", "homemade-semi-finished", "Берики"], ["semi-manti", "homemade-semi-finished", "Манты"], ["semi-dumplings", "homemade-semi-finished", "Вареники"], ["semi-cutlets", "homemade-semi-finished", "Котлеты"], ["semi-kupaty", "homemade-semi-finished", "Купаты"], ["semi-meatballs", "homemade-semi-finished", "Фрикадельки"], ["semi-pancakes", "homemade-semi-finished", "Блины"],
+  ["semi-beriki", "homemade-semi-finished", "Берики"], ["semi-manti", "homemade-semi-finished", "Манты"], ["semi-dumplings", "homemade-semi-finished", "Вареники"], ["semi-cutlets", "homemade-semi-finished", "Котлеты"], ["semi-kupaty", "homemade-semi-finished", "Купаты"], ["semi-meatballs", "homemade-semi-finished", "Фрикадельки"], ["semi-pancakes", "homemade-semi-finished", "Блины"], ["semi-other", "homemade-semi-finished", "Другие полуфабрикаты"],
   ["national-dotur", "national-products", "Дотур"], ["national-kazy", "national-products", "Казы"], ["national-blood-sausage", "national-products", "Кровяная колбаса"]
 ].map(([slug, categorySlug, name]) => ({ slug, categorySlug, name, description: "Ассортимент уточняется.", imageLabel: "Фото подкатегории уточняется" }));
 
-export const products: Product[] = normalizeCatalogProducts(catalogProductSource);
+export const products: Product[] = normalizeCatalogProducts(catalogProductSource as CatalogProductInput[]);
 
 export const collections: Collection[] = [
   { slug: "soup", name: "Для супа", description: "Подборка продуктов для супа появится после подтверждения ассортимента.", productSlugs: [] },

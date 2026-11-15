@@ -50,8 +50,14 @@ describe("catalog seed data", () => {
     expect(categories.map((category) => category.slug)).not.toContain("sausages");
   });
 
-  it("starts with no products and no misleading sample cards", () => {
-    expect(products).toEqual([]);
+  it("contains only the 25 publication candidates from the approved source split", () => {
+    expect(products).toHaveLength(25);
+    expect(products.map((product) => product.slug)).not.toContain("beriki-veal-pork-pending");
+    expect(products.map((product) => product.slug)).not.toContain("horse-meat-kazy");
+    expect(products.find((product) => product.slug === "chicken-cutlets")?.photos).toEqual([
+      "/images/products/homemade-semi-finished/semi-cutlets/chicken-cutlets.jpg"
+    ]);
+    expect(products.filter((product) => product.photos.length === 0)).toHaveLength(24);
   });
 
   it("defines subcategories for every main category", () => {
@@ -75,7 +81,7 @@ describe("catalog seed data", () => {
     expect(collections.every((collection) => new Set(collection.productSlugs).size === collection.productSlugs.length)).toBe(true);
     expect(collections.every((collection) => collection.productSlugs.every((slug) => products.some((product) => product.slug === slug)))).toBe(true);
     expect(getProductsByCollection("soup")).toEqual([]);
-    expect(getProductsBySubcategory("meat-merino-lamb")).toEqual([]);
+    expect(getProductsBySubcategory("meat-merino-lamb").map((product) => product.slug)).toEqual(["merino-lamb"]);
     expect(getCollection("missing")).toBeUndefined();
     expect(isProductReferenceValid({
       slug: "invalid-reference",
