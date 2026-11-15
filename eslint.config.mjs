@@ -3,6 +3,7 @@ import nextVitals from "eslint-config-next/core-web-vitals";
 const eslintConfig = [
   ...nextVitals,
   {
+    files: ["components/catalog-browser.tsx"],
     rules: {
       // CatalogBrowser intentionally synchronizes route-provided filter state.
       "react-hooks/set-state-in-effect": "off"

@@ -30,32 +30,43 @@
 
 **Files:** Read: `package.json`, `package-lock.json`, `.eslintrc.json`, `next.config.mjs`, `.github/workflows/deploy-pages.yml`
 
-- [ ] Record current full and production-only `npm audit`, direct package versions, npm registry current versions, and current test/build baseline.
-- [ ] Select the smallest supported Next/React/Vitest/ESLint set that removes applicable advisories without crossing an unnecessary migration boundary.
-- [ ] Stop with a written reason if peer constraints or build behavior make the safe migration impossible.
+- [x] Record current full and production-only `npm audit`, direct package versions, npm registry current versions, and current test/build baseline.
+- [x] Select the smallest supported Next/React/Vitest/ESLint set that removes applicable advisories without crossing an unnecessary migration boundary.
+- [x] Stop with a written reason if peer constraints or build behavior make the safe migration impossible.
 
 ### Task 2: Upgrade manifests and lockfile
 
 **Files:** Modify: `package.json`, `package-lock.json`, `eslint.config.mjs`; delete obsolete `.eslintrc.json` if required.
 
-- [ ] Update direct versions explicitly; keep production dependencies and devDependencies correctly classified.
-- [ ] Replace `next lint` with the supported ESLint invocation, preserving `next/core-web-vitals` rules.
-- [ ] Verify `npm ci` succeeds from the resulting lockfile with a writable task-specific cache.
-- [ ] Run `npm audit`, `npm audit --omit=dev`, and `npm ls --depth=0`; record advisory counts and remaining paths.
+- [x] Update direct versions explicitly; keep production dependencies and devDependencies correctly classified.
+- [x] Replace `next lint` with the supported ESLint invocation, preserving `next/core-web-vitals` rules.
+- [x] Verify `npm ci` succeeds from the resulting lockfile with a writable task-specific cache.
+- [x] Run `npm audit`, `npm audit --omit=dev`, and `npm ls --depth=0`; record advisory counts and remaining paths.
 
 ### Task 3: Regression verification
 
 **Files:** Read: `app/`, `components/`, `lib/`, `data/catalog-products.json`, `out/`
 
-- [ ] Run `npm run typecheck`, `npm run lint`, `npm test`, `npm run build`, and `git diff --check`.
-- [ ] Run the build with `GITHUB_ACTIONS=true` and verify generated base paths, robots/sitemap and no product records.
-- [ ] Start a local static server and smoke-test home, catalog/category/subcategory/product empty states, collections, contacts/map, information pages, search/filter/sort UI where present, and mobile viewport behavior.
+- [x] Run `npm run typecheck`, `npm run lint`, `npm test`, `npm run build`, and `git diff --check`.
+- [x] Run the build with `GITHUB_ACTIONS=true` and verify generated base paths, robots/sitemap and no product records.
+- [x] Start a local static server and smoke-test home, catalog/category/subcategory/product empty states, collections, contacts/map, information pages, search/filter/sort UI where present, and mobile viewport behavior.
 
 ### Task 4: Review and release
 
 **Files:** Read: final diff and `.github/workflows/deploy-pages.yml`
 
-- [ ] Request independent code review of the feature diff.
+- [x] Request independent code review of the feature diff.
 - [ ] Commit only dependency/config/spec/plan files, push `codex/dependency-security-upgrade`, and create a PR against `main`.
 - [ ] Wait for PR checks and merge only after they pass.
 - [ ] Confirm the existing Pages workflow deploys `main`, then verify public URLs and mobile layout; report any remaining advisories with exact scope.
+
+## Observed verification results
+
+- `npm ci --ignore-scripts`: passed.
+- `npm run typecheck`: passed.
+- `npm run lint`: passed with 0 errors and 0 warnings.
+- `npm test`: 7 files, 45 tests passed.
+- `npm run build` and `GITHUB_ACTIONS=true npm run build`: 52 static pages generated.
+- `npm audit --omit=dev`: 0 vulnerabilities; full `npm audit`: 7 moderate dev-only entries in the TypeScript ESLint graph.
+- Static HTTP smoke: all checked routes returned 200; basePath links present; robots disallows `/`; sitemap is empty.
+- Browser smoke at 320/375/390px: menu and filters expanded; document/body scroll width equaled viewport width.
