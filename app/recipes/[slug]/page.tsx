@@ -15,14 +15,16 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 export const dynamic = "force-static";
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const recipe = recipes.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const recipe = recipes.find((item) => item.slug === slug);
   return recipe ? buildPageMetadata({ title: `${recipe.title} — рецепт`, description: recipe.excerpt, path: `/recipes/${recipe.slug}` }) : buildPageMetadata({ title: "Рецепт уточняется", description: "Рецепт появится после согласования материалов.", path: "/recipes" });
 }
 
-export default function RecipePage({ params }: { params: { slug: string } }) {
-  const recipe = recipes.find((item) => item.slug === params.slug);
-  if (!recipe && params.slug === "pending") {
+export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const recipe = recipes.find((item) => item.slug === slug);
+  if (!recipe && slug === "pending") {
     return <div className="container-shell py-12"><PageHeading eyebrow="Рецепт" title="Страница рецепта появится после согласования" description="Этот технический маршрут показывает корректное пустое состояние и не содержит выдуманного блюда." crumbs={[{ label: "Рецепты", href: "/recipes" }]} /><div className="py-12"><EmptyContent label="Материалы уточняются" title="Пока здесь нет опубликованного рецепта" description="Когда появятся подтверждённые ингредиенты и шаги приготовления, эта структура будет использована для отдельной страницы рецепта." href="/recipes" actionLabel="Вернуться к рецептам" /></div></div>;
   }
   if (!recipe) notFound();
