@@ -10,7 +10,9 @@ function GalleryImage({ src, alt, priority = false, className = "" }: { src: str
   return <Image src={src} alt={alt} fill sizes="(max-width: 1024px) 100vw, 55vw" priority={priority} className={`object-contain ${className}`} unoptimized />;
 }
 
-export function ProductGallery({ product }: { product: Product }) {
+type ProductGalleryData = Pick<Product, "slug" | "name" | "photos" | "imageLabel">;
+
+export function ProductGallery({ product }: { product: ProductGalleryData }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isZoomOpen, setIsZoomOpen] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
