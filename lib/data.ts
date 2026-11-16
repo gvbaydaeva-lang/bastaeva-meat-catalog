@@ -92,7 +92,12 @@ const pendingProductOverrides: Record<string, Partial<CatalogProductInput>> = {
 const combinedCatalogSource = [
   ...(catalogProductSource as CatalogProductInput[]),
   ...(pendingProductSource as CatalogProductInput[])
-].map((product) => ({ ...product, ...pendingProductOverrides[product.slug] }));
+].map((product) => ({
+  ...product,
+  description: product.description.replace(/\s*по ассортиментной доске магазина\.?$/, "."),
+  details: null,
+  ...pendingProductOverrides[product.slug]
+}));
 
 export const products: Product[] = normalizeCatalogProducts(combinedCatalogSource);
 

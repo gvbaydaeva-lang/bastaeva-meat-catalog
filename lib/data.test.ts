@@ -62,6 +62,7 @@ describe("catalog seed data", () => {
     ]);
     expect(products.filter((product) => product.photos.length === 0)).toHaveLength(46);
     expect(categories.every((category) => products.some((product) => product.categorySlug === category.slug))).toBe(true);
+    expect(products.every((product) => !product.description.includes("ассортиментной доске") && product.details === null)).toBe(true);
   });
 
   it("defines subcategories for every main category", () => {
