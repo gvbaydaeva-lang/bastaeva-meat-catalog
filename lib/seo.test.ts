@@ -45,4 +45,19 @@ describe("SEO policy", () => {
     expect(buildRecipeJsonLd({ slug: "pending", title: "", excerpt: "", imageLabel: "", ingredients: [], steps: [] }, baseEnv)).toBeUndefined();
     expect(buildProductJsonLd({ name: "Говядина", description: "Подтверждено", slug: "beef", categorySlug: "meat", subcategorySlug: "lamb", photos: [], price: null, saleUnit: null, availability: "unknown" }, baseEnv)?.["@type"]).toBe("Product");
   });
+
+  it("does not expose disputed prices in product schema", () => {
+    expect(buildProductJsonLd({
+      name: "Казы",
+      description: "Товар из ассортимента магазина.",
+      slug: "kazy",
+      categorySlug: "national-products",
+      subcategorySlug: "national-kazy",
+      photos: [],
+      price: 1100,
+      saleUnit: "kg",
+      priceDisplay: "inquiry",
+      availability: "unknown"
+    }, baseEnv)?.offers).toBeUndefined();
+  });
 });
