@@ -18,6 +18,7 @@ export type Subcategory = {
 
 export type ProductTag = "new" | "popular" | "recommended";
 export type SaleUnit = "kg" | "piece" | "package";
+export type PriceDisplay = "range" | "inquiry";
 
 export type PriceOption = {
   label: string;
@@ -33,6 +34,7 @@ export type CatalogProductInput = {
   description: string;
   details?: string | null;
   priceOptions: PriceOption[];
+  priceDisplay?: PriceDisplay;
   composition: string | null;
   characteristics: string[];
   photos: string[];
@@ -53,6 +55,7 @@ export type Product = {
   price: number | null;
   saleUnit: SaleUnit | null;
   priceOptions?: PriceOption[];
+  priceDisplay?: PriceDisplay;
   composition: string | null;
   characteristics: string[];
   photos: string[];

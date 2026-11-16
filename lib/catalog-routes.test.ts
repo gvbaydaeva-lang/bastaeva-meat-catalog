@@ -19,9 +19,9 @@ describe("catalog route params", () => {
   });
 
   it("keeps product URLs nested and collection URLs separate", () => {
-    expect(getProductRouteParams()).toHaveLength(25);
+    expect(getProductRouteParams()).toHaveLength(47);
     expect(getProductRouteParams()).toContainEqual({ category: "homemade-semi-finished", subcategory: "semi-cutlets", product: "chicken-cutlets" });
-    expect(getProductRouteParams().map(({ product }) => product)).not.toContain("horse-meat-kazy");
+    expect(getProductRouteParams()).toContainEqual({ category: "national-products", subcategory: "national-kazy", product: "horse-meat-kazy" });
     expect(getCollectionRouteParams()).toEqual([
       { collection: "soup" },
       { collection: "frying" },

@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import fullImportDraft from "../docs/catalog-products-import-draft-2026-11-15.json";
 import {
   categories,
   collections,
@@ -50,14 +51,17 @@ describe("catalog seed data", () => {
     expect(categories.map((category) => category.slug)).not.toContain("sausages");
   });
 
-  it("contains only the 25 publication candidates from the approved source split", () => {
-    expect(products).toHaveLength(25);
-    expect(products.map((product) => product.slug)).not.toContain("beriki-veal-pork-pending");
-    expect(products.map((product) => product.slug)).not.toContain("horse-meat-kazy");
+  it("contains all 47 prepared products without duplicate URLs", () => {
+    expect(products).toHaveLength(47);
+    expect(new Set(products.map((product) => product.slug)).size).toBe(47);
+    expect(products).toContainEqual(expect.objectContaining({ slug: "beriki-veal-pork-pending" }));
+    expect(products).toContainEqual(expect.objectContaining({ slug: "horse-meat-kazy" }));
+    expect(new Set(products.map((product) => product.slug))).toEqual(new Set(fullImportDraft.map((product) => product.slug)));
     expect(products.find((product) => product.slug === "chicken-cutlets")?.photos).toEqual([
       "/images/products/homemade-semi-finished/semi-cutlets/chicken-cutlets.jpg"
     ]);
-    expect(products.filter((product) => product.photos.length === 0)).toHaveLength(24);
+    expect(products.filter((product) => product.photos.length === 0)).toHaveLength(46);
+    expect(categories.every((category) => products.some((product) => product.categorySlug === category.slug))).toBe(true);
   });
 
   it("defines subcategories for every main category", () => {

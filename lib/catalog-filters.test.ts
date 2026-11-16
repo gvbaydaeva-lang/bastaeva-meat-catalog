@@ -89,6 +89,19 @@ describe("catalog filtering", () => {
     expect(filterAndSortProducts(fixtures, filter({ sort: "price-asc" })).map((item) => item.slug)).toEqual(["lamb-soup", "veal-grill", "dumplings"]);
   });
 
+  it("does not use a disputed price in filters or price sorting", () => {
+    const disputed = { ...fixtures[0], slug: "disputed", name: "Спорная цена", priceDisplay: "inquiry" as const };
+    expect(filterAndSortProducts([...fixtures, disputed], filter({ maxPrice: "900" })).map((item) => item.slug)).toEqual([
+      "lamb-soup"
+    ]);
+    expect(filterAndSortProducts([...fixtures, disputed], filter({ sort: "price-asc" })).map((item) => item.slug)).toEqual([
+      "lamb-soup",
+      "veal-grill",
+      "dumplings",
+      "disputed"
+    ]);
+  });
+
   it("supports name, price, popular and new sorting", () => {
     expect(filterAndSortProducts(fixtures, filter({ sort: "name-asc" })).map((item) => item.slug)).toEqual(["lamb-soup", "dumplings", "veal-grill"]);
     expect(filterAndSortProducts(fixtures, filter({ sort: "name-desc" })).map((item) => item.slug)).toEqual(["veal-grill", "dumplings", "lamb-soup"]);

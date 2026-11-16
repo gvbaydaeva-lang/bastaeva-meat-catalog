@@ -66,6 +66,10 @@ function compareNames(left: Product, right: Product) {
   return left.name.localeCompare(right.name, "ru-RU", { sensitivity: "base" });
 }
 
+function comparablePrice(product: Product) {
+  return product.priceDisplay === "inquiry" ? null : product.price;
+}
+
 export function filterAndSortProducts(products: Product[], filters: CatalogFilters) {
   const query = normalize(filters.query);
   const minPrice = numericFilter(filters.minPrice);
@@ -91,8 +95,9 @@ export function filterAndSortProducts(products: Product[], filters: CatalogFilte
     if (filters.meatType && !searchable.includes(normalize(filters.meatType))) return false;
     if (filters.purpose && !product.purpose.includes(filters.purpose)) return false;
     if (filters.availability !== "all" && product.availability !== filters.availability) return false;
-    if (minPrice !== null && (product.price === null || product.price < minPrice)) return false;
-    if (maxPrice !== null && (product.price === null || product.price > maxPrice)) return false;
+    const comparable = comparablePrice(product);
+    if (minPrice !== null && (comparable === null || comparable < minPrice)) return false;
+    if (maxPrice !== null && (comparable === null || comparable > maxPrice)) return false;
     return true;
   });
 
@@ -104,10 +109,12 @@ export function filterAndSortProducts(products: Product[], filters: CatalogFilte
       const tagDifference = Number(right.tags.includes(tag)) - Number(left.tags.includes(tag));
       return tagDifference || compareNames(left, right);
     }
-    if (left.price === null && right.price === null) return compareNames(left, right);
-    if (left.price === null) return 1;
-    if (right.price === null) return -1;
-    return filters.sort === "price-asc" ? left.price - right.price : right.price - left.price;
+    const leftPrice = comparablePrice(left);
+    const rightPrice = comparablePrice(right);
+    if (leftPrice === null && rightPrice === null) return compareNames(left, right);
+    if (leftPrice === null) return 1;
+    if (rightPrice === null) return -1;
+    return filters.sort === "price-asc" ? leftPrice - rightPrice : rightPrice - leftPrice;
   });
 }
 

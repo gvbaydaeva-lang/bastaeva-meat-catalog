@@ -44,6 +44,18 @@ describe("product detail helpers", () => {
     }))).toBe("780–850 ₽ / кг");
   });
 
+  it("hides disputed price options behind a customer-safe prompt", () => {
+    expect(formatProductPrice(fixtureProduct({
+      price: 1100,
+      saleUnit: "kg",
+      priceDisplay: "inquiry",
+      priceOptions: [
+        { label: "Вариант 1", price: 1100, saleUnit: "kg" },
+        { label: "Вариант 2", price: 1400, saleUnit: "kg" }
+      ]
+    }))).toBe("Цену уточняйте");
+  });
+
   it("returns human-readable availability labels", () => {
     expect(getProductAvailabilityLabel("in-stock")).toBe("В наличии");
     expect(getProductAvailabilityLabel("out-of-stock")).toBe("Нет в наличии");

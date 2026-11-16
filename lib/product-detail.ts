@@ -13,6 +13,7 @@ const availabilityLabels: Record<AvailabilityStatus, string> = {
 };
 
 export function formatProductPrice(product: Product) {
+  if (product.priceDisplay === "inquiry") return "Цену уточняйте";
   if (product.price === null || product.price <= 0) return "Цену уточняйте";
   const unit = product.saleUnit ? ` / ${saleUnitLabels[product.saleUnit]}` : "";
   const prices = product.priceOptions?.map((option) => option.price).filter((price) => price > 0) ?? [];

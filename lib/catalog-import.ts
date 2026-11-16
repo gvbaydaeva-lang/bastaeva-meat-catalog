@@ -26,6 +26,7 @@ export function normalizeCatalogProducts(records: CatalogProductInput[]): Produc
       details: record.details ?? null,
       preparation: record.preparation ?? [],
       priceOptions: record.priceOptions,
+      priceDisplay: record.priceDisplay,
       price: firstPrice?.price ?? null,
       saleUnit: firstPrice?.saleUnit ?? null
     };

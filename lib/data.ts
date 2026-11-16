@@ -1,5 +1,6 @@
 import type { CatalogProductInput, Category, Collection, Product, Subcategory } from "./types";
 import catalogProductSource from "../data/catalog-products.json";
+import pendingProductSource from "../data/catalog-products-pending.json";
 import { normalizeCatalogProducts } from "./catalog-import";
 import { recipes as contentRecipes } from "./content";
 
@@ -53,7 +54,47 @@ export const subcategories: Subcategory[] = [
   ["national-dotur", "national-products", "Дотур"], ["national-kazy", "national-products", "Казы"], ["national-blood-sausage", "national-products", "Кровяная колбаса"]
 ].map(([slug, categorySlug, name]) => ({ slug, categorySlug, name, description: "Ассортимент уточняется.", imageLabel: "Фото подкатегории уточняется" }));
 
-export const products: Product[] = normalizeCatalogProducts(catalogProductSource as CatalogProductInput[]);
+const pendingProductOverrides: Record<string, Partial<CatalogProductInput>> = {
+  "beriki-veal-pork-pending": {
+    name: "Берики, вариант 1",
+    description: "Домашние берики из ассортимента магазина.",
+    details: null
+  },
+  "beriki-pork-pending": {
+    name: "Берики, вариант 2",
+    description: "Домашние берики из ассортимента магазина.",
+    details: null
+  },
+  "liver-in-net-sausage-pending": {
+    name: "Изделие с печенью",
+    description: "Национальное мясное изделие из ассортимента магазина.",
+    details: null
+  },
+  "kalmyk-stew-sausage-pending": {
+    name: "Калмыцкое мясное изделие",
+    description: "Традиционное мясное изделие из ассортимента магазина.",
+    details: null
+  },
+  "blood-sausage": { priceDisplay: "inquiry", details: null },
+  "horse-meat-kazy": { priceDisplay: "inquiry", details: null },
+  "lamb-tongue": { priceDisplay: "inquiry", details: null },
+  "beef-tongue": { priceDisplay: "inquiry", details: null },
+  "soup-sets-pending": { priceDisplay: "inquiry", details: null },
+  "home-chicken-meat-pending": { priceDisplay: "inquiry", details: null },
+  "chicken-thighs-meaty-pending": { priceDisplay: "inquiry", details: null },
+  "chicken-drumsticks-pending": { priceDisplay: "inquiry", details: null },
+  "chicken-breast-pending": { priceDisplay: "inquiry", details: null },
+  "duck": { priceDisplay: "inquiry", details: null },
+  "turkey": { priceDisplay: "inquiry", details: null },
+  "goose": { priceDisplay: "inquiry", details: null }
+};
+
+const combinedCatalogSource = [
+  ...(catalogProductSource as CatalogProductInput[]),
+  ...(pendingProductSource as CatalogProductInput[])
+].map((product) => ({ ...product, ...pendingProductOverrides[product.slug] }));
+
+export const products: Product[] = normalizeCatalogProducts(combinedCatalogSource);
 
 export const collections: Collection[] = [
   { slug: "soup", name: "Для супа", description: "Подборка продуктов для супа появится после подтверждения ассортимента.", productSlugs: [] },
